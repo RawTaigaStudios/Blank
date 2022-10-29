@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
+using UnityEngine.UI;
 
 public class CharacterController : MonoBehaviour
 {
@@ -18,11 +19,13 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private int jumpCount;
     private Rigidbody2D rb;
     [SerializeField] bool canMoveRight, canMoveLeft;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+
     }
 
     // Update is called once per frame
