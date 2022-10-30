@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Walls
   - Trigger
+  - Damage
+  - WallNoVis
+  - End
   layers:
   - Default
   - TransparentFX
@@ -42,4 +45,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BG
+    uniqueID: 2233669009
+    locked: 0
+  - name: Platform
+    uniqueID: 4127158481
+    locked: 0
+  - name: Danger&Trigger
+    uniqueID: 2606929079
+    locked: 0
+  - name: Boxes
+    uniqueID: 4085442681
+    locked: 0
+  - name: Player
+    uniqueID: 2699462053
     locked: 0
