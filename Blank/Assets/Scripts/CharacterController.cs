@@ -38,7 +38,8 @@ public class CharacterController : MonoBehaviour
             jumpCount = maxJumpCount;
             lastWallSide = 0;
         }
-        Debug.Log(isGrounded());
+        isAttachedWall();
+
     }
 
     void Move()
@@ -49,7 +50,6 @@ public class CharacterController : MonoBehaviour
         if(moveDirection < 0 && canMoveLeft)
             rb.velocity = new Vector2(moveDirection * speed * Time.fixedDeltaTime, rb.velocity.y);
 
-        isAttachedWall();
     }
     bool isGrounded()
     {
