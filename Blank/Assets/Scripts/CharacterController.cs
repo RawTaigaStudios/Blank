@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,19 +7,32 @@ using UnityEngine.UI;
 
 public class CharacterController : MonoBehaviour
 {
+    [Header("Player Constraints")]
+
     [SerializeField] private LayerMask PlatformLayerMask;
-    [SerializeField] private float speed;
+
+    private BoxCollider2D boxCollider;
+    private Rigidbody2D rb;
+
+
+    [Header("Jump Constraints")]
+
     [SerializeField] private float jumpForce;
-
-    [SerializeField]private int lastWallSide;
-
     [SerializeField] private float gravityAttaWall;
     [SerializeField] private float gravityNormal;
-    private int maxJumpCount = 1;
-    private BoxCollider2D boxCollider;
-    [SerializeField] private int jumpCount;
-    private Rigidbody2D rb;
+    [SerializeField] private int maxJumpCount = 2;
+
+    private int jumpCount;
+    private int lastWallSide;
+    private float jumpTimer = .2f;
+    private bool canCheckGround = true;
+
+    [Header("Movement Constraints")]
+
     [SerializeField] bool canMoveRight, canMoveLeft;
+    [SerializeField] private float speed;
+    
+    
 
     // Start is called before the first frame update
     void Start()
@@ -32,8 +46,8 @@ public class CharacterController : MonoBehaviour
     void Update()
     {
         if (Input.GetAxis("Horizontal") != 0) Move();
-        if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 0) Jump();
-        if (isGrounded())
+        if (Input.GetButtonDown("Jump") && jumpCount > 0) Jump();
+        if (isGrounded() && canCheckGround)
         {
             jumpCount = maxJumpCount;
             lastWallSide = 0;
@@ -83,14 +97,14 @@ public class CharacterController : MonoBehaviour
         {
             case "Left":
                 {
-                    if (lastWallSide == 1) jumpCount = maxJumpCount;
+                    if (lastWallSide == 1) jumpCount = 1;
                     canMoveLeft = false;
                     lastWallSide = -1;
                     break;
                 }
             case "Right":
                 {
-                    if (lastWallSide == -1) jumpCount = maxJumpCount;
+                    if (lastWallSide == -1) jumpCount = 1;
                     canMoveRight = false;
                     lastWallSide = 1;
                     break;
@@ -105,10 +119,16 @@ public class CharacterController : MonoBehaviour
         if ((!canMoveLeft || !canMoveRight) && rb.velocity.y < 0) rb.gravityScale = gravityAttaWall;
         else rb.gravityScale = gravityNormal;
     }
+    IEnumerator JumpLapse()
+    {
+        canCheckGround = false;
+        yield return new WaitForSeconds(jumpTimer);
+        canCheckGround = true;
+    }
     void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.fixedDeltaTime);
         jumpCount--;
-        
+        StartCoroutine(JumpLapse());
     }
 }

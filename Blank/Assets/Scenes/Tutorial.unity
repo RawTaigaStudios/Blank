@@ -1883,14 +1883,13 @@ MonoBehaviour:
   PlatformLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  speed: 500
   jumpForce: 750
-  lastWallSide: 0
   gravityAttaWall: 1
   gravityNormal: 5
-  jumpCount: 1
+  maxJumpCount: 1
   canMoveRight: 0
   canMoveLeft: 0
+  speed: 500
 --- !u!50 &1120199537
 Rigidbody2D:
   serializedVersion: 4
