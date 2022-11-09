@@ -9,6 +9,9 @@ TagManager:
   - Damage
   - WallNoVis
   - End
+  - T2Platform
+  - T1Platform
+  - T!Platform
   layers:
   - Default
   - TransparentFX

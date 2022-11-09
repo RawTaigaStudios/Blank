@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class CharacterController : MonoBehaviour
 {
     [Header("Player Constraints")]
-
+    
     [SerializeField] private LayerMask PlatformLayerMask;
 
     private BoxCollider2D boxCollider;
