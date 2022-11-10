@@ -11,7 +11,7 @@ TagManager:
   - End
   - T2Platform
   - T1Platform
-  - T!Platform
+  - Spawner
   layers:
   - Default
   - TransparentFX
