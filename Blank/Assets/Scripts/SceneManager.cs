@@ -34,9 +34,10 @@ public class SceneManager : MonoBehaviour
     public void OpenMenu()
     {
         Debug.Log("Abrir Menu");
-        //Time.timeScale = 0;
+        Time.timeScale = 0;
         pause = true;
         gameMenu.SetActive(true);
+        CloseOptions();
     }
     public void CloseMenu()
     {
@@ -48,10 +49,12 @@ public class SceneManager : MonoBehaviour
     public void OpenOptions()
     {
         Debug.Log("Abriendo Menu");
+        gameMenu.SetActive(false);
         optionsMenu.SetActive(true);
     }
     public void CloseOptions()
     {
+        gameMenu.SetActive(true);
         optionsMenu.SetActive(false);
     }
     public void CloseGame()
