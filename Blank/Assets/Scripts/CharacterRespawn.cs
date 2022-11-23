@@ -22,7 +22,6 @@ public class CharacterRespawn : MonoBehaviour
 
         if (collision.tag == "Player")
         {
-            Debug.Log("Has recibido daño");
             StartCoroutine(DeathWait(collision.gameObject));
         }
     }
@@ -33,13 +32,11 @@ public class CharacterRespawn : MonoBehaviour
     private IEnumerator DeathWait(GameObject character)
     {
         character.SetActive(false);
-        Debug.Log("Iniciando DeathTimer");
         
         yield return new WaitForSeconds(2f);
         character.SetActive(true);
         character.transform.position = charSpawner.transform.position;
         character.transform.rotation = charSpawner.transform.rotation;
-        Debug.Log("Reapareciendo");
         
     }
 }

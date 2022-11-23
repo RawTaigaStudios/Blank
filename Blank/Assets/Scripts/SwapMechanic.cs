@@ -8,15 +8,11 @@ public class SwapMechanic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Leyendo plataformas");
 
         Type1Platforms = GameObject.FindGameObjectsWithTag("T1Platform");
-        Debug.Log("Plataformas 1: "+Type1Platforms.GetLength(0));
         
         Type2Platforms = GameObject.FindGameObjectsWithTag("T2Platform");
-        Debug.Log("Plataformas 2: "+Type2Platforms.GetLength(0));
 
-        Debug.Log("Platformas leidas");
 
         foreach (GameObject go in Type2Platforms)
         {
@@ -27,7 +23,6 @@ public class SwapMechanic : MonoBehaviour
             go.GetComponent<BoxCollider2D>().enabled = !go.GetComponent<BoxCollider2D>().isActiveAndEnabled;
 
         }
-        Debug.Log("Plataformas 2 cambiadas");
     }
 
     // Update is called once per frame
@@ -41,7 +36,6 @@ public class SwapMechanic : MonoBehaviour
 
     private void SwapMech()
     {
-        Debug.Log("Plataformas cambiadas");
         foreach (GameObject go in Type1Platforms)
         {
             var col = go.GetComponent<Renderer>().material.color;

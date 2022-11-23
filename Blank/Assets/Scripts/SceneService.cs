@@ -20,7 +20,6 @@ public class SceneService : MonoBehaviour
 
     public void CloseGame()
     {
-        Debug.Log("Cerrar juego");
         Application.Quit();
     }
 

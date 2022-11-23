@@ -38,7 +38,6 @@ public class GameCanvasManager : MonoBehaviour
     }
     public void OpenMenu()
     {
-        Debug.Log("Abrir Menu");
         Time.timeScale = 0;
         pause = true;
         gameMenu.SetActive(true);
@@ -46,14 +45,12 @@ public class GameCanvasManager : MonoBehaviour
     }
     public void CloseMenu()
     {
-        Debug.Log("Cerrando menu");
         Time.timeScale = 1;
         pause = false;
         gameMenu.SetActive(false);
     }
     public void OpenOptions()
     {
-        Debug.Log("Abriendo Menu");
         gameMenu.SetActive(false);
         optionsMenu.SetActive(true);
     }
