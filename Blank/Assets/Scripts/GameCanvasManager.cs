@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class SceneManager : MonoBehaviour
+public class GameCanvasManager : MonoBehaviour
 {
     [SerializeField] GameObject gameMenu;
     [SerializeField] GameObject optionsMenu;
@@ -25,8 +27,11 @@ public class SceneManager : MonoBehaviour
             else CloseMenu();
         }
     }
-
     public void StartGame()
+    {
+        EditorSceneManager.LoadScene("Tutorial");
+    }
+    public void ContinueGame()
     {
         CloseMenu();
         pause = false;
@@ -57,10 +62,9 @@ public class SceneManager : MonoBehaviour
         gameMenu.SetActive(true);
         optionsMenu.SetActive(false);
     }
-    public void CloseGame()
+    public void ReturnMainMenu()
     {
-        Debug.Log("Cerrar juego");
-        Application.Quit();
+        EditorSceneManager.LoadScene("MenuInicial");
     }
 
 }
