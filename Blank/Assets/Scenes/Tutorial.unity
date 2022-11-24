@@ -715,6 +715,10 @@ PrefabInstance:
       value: T1Plat
       objectReference: {fileID: 0}
     - target: {fileID: 9183339766385176588, guid: 4f7e99da87a5e4adfa14b37098592aad, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9183339766385176588, guid: 4f7e99da87a5e4adfa14b37098592aad, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -1908,6 +1912,10 @@ PrefabInstance:
     - target: {fileID: 4808587173004865885, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
       propertyPath: m_Name
       value: T2Plat
+      objectReference: {fileID: 0}
+    - target: {fileID: 4808587173004865885, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5390435050459841487, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
       propertyPath: m_RootOrder
