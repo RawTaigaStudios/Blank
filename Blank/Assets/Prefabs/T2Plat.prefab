@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5390435050459841487}
   - component: {fileID: 4726615041527980193}
   - component: {fileID: -3741106507825784519}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T2Plat
   m_TagString: T2Platform
   m_Icon: {fileID: 0}
