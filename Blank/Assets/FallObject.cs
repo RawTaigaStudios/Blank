@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FallObject : MonoBehaviour
@@ -19,7 +20,7 @@ public class FallObject : MonoBehaviour
     {
         if (CheckVerticalRay())
         {
-            
+            MoveObjectDown();
         }
     }
     private void MoveObjectDown()
@@ -30,21 +31,26 @@ public class FallObject : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter2D(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Player") ||
-            collision.gameObject.CompareTag("Platform"))
+            collision.gameObject.layer.Equals("Platform"))
         {
             Destroy(gameObject);
         }
     }
     private bool CheckVerticalRay()
     {
-        RaycastHit2D hit = Physics2D.BoxCast(
-            boxCollider.bounds.center, boxCollider.bounds.size, 0f,
-            Vector2.down, 100f, playerLayerMask);
-        if (hit)
+        RaycastHit2D hit = Physics2D.BoxCast(new Vector2(boxCollider.bounds.center.x,
+            boxCollider.bounds.center.y - boxCollider.bounds.size.y),
+            boxCollider.bounds.size, 0f,
+            Vector2.down, Mathf.Infinity);
+        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * hit.distance, Color.yellow);
+
+        Debug.Log(hit.collider.name);
+        if (hit.collider.CompareTag("Player"))
         {
+            Debug.Log(hit.collider.gameObject.name);
             return true;
         }
         else return false;
