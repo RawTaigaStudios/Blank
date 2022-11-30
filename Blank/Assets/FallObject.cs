@@ -47,7 +47,6 @@ public class FallObject : MonoBehaviour
             Vector2.down, Mathf.Infinity);
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * hit.distance, Color.yellow);
 
-        Debug.Log(hit.collider.name);
         if (hit.collider.CompareTag("Player"))
         {
             Debug.Log(hit.collider.gameObject.name);
