@@ -25,10 +25,8 @@ public class CharacterRespawn : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.tag);
         if (collision.tag == "Damage")
         {
-            Debug.Log("colision");
             StartCoroutine(DeathWait());
         }
     }
@@ -36,14 +34,16 @@ public class CharacterRespawn : MonoBehaviour
     {
         sprite.enabled = false;
         controller.enabled = false;
-        rb.Sleep();
+        rb.simulated = false ;
+        
         yield return new WaitForSeconds(2f);
-        Debug.Log("Han pasado 2 sec");
+
         controller.enabled = true;
-        rb.WakeUp();
+        rb.simulated = true;
         sprite.enabled = true;
-        GetComponentInParent<Transform>().position = charSpawner.transform.position;
-        GetComponentInParent<Transform>().rotation = charSpawner.transform.rotation;
+        Camera.main.transform.position = charSpawner.transform.position;
+        gameObject.transform.position = charSpawner.transform.position;
+        gameObject.transform.rotation = charSpawner.transform.rotation;
         
     }
 }
