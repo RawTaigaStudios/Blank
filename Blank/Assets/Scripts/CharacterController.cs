@@ -32,15 +32,16 @@ public class CharacterController : MonoBehaviour
 
     [SerializeField] bool canMoveRight, canMoveLeft;
     [SerializeField] private float speed;
-    
-    
+
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
-
+        anim = GetComponentInChildren<Animator>();
+        anim.SetBool("Wall", true);
     }
 
     // Update is called once per frame
@@ -50,6 +51,7 @@ public class CharacterController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && jumpCount > 0) Jump();
         if (isGrounded() && canCheckGround)
         {
+            anim.SetBool("Grounded", true);
             jumpCount = maxJumpCount;
             lastWallSide = 0;
         }
@@ -61,10 +63,16 @@ public class CharacterController : MonoBehaviour
     {
         float moveDirection = Input.GetAxis("Horizontal");
         if(moveDirection > 0 && canMoveRight)
+        {
+            anim.SetFloat("xVelocity", 1f);
             rb.velocity = new Vector2(moveDirection * speed * Time.fixedDeltaTime, rb.velocity.y);
-        if(moveDirection < 0 && canMoveLeft)
+        }
+        if (moveDirection < 0 && canMoveLeft)
+        {
+            anim.SetFloat("xVelocity", -1f);
             rb.velocity = new Vector2(moveDirection * speed * Time.fixedDeltaTime, rb.velocity.y);
-
+        }
+        if (moveDirection == 0) anim.SetFloat("xVelocity", 0f);
     }
     bool isGrounded()
     {
@@ -128,6 +136,8 @@ public class CharacterController : MonoBehaviour
     }
     void Jump()
     {
+        anim.SetBool("Grounded", false);
+        anim.SetTrigger("Jump");
         rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.fixedDeltaTime);
         jumpCount--;
         StartCoroutine(JumpLapse());
