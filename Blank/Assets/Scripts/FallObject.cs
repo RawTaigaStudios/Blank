@@ -9,6 +9,9 @@ public class FallObject : MonoBehaviour
 
     [SerializeField] private float speed = 1;
     [SerializeField] private LayerMask playerLayerMask;
+    private int platformLayerValue = 6;
+
+    private bool targetFound = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,40 +21,38 @@ public class FallObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CheckVerticalRay())
+        if (targetFound)
         {
             MoveObjectDown();
+        }
+        else
+        {
+            CheckVerticalRay();
         }
     }
     private void MoveObjectDown()
     {
         transform.position -= new Vector3(0f,speed * Time.deltaTime, 0f);
     }
-    private void CheckHit()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.CompareTag("Player") ||
-            collision.gameObject.layer.Equals("Platform"))
+        if (collision.gameObject.CompareTag("Player") ||
+            collision.gameObject.layer.Equals(platformLayerValue))
         {
             Destroy(gameObject);
         }
     }
-    private bool CheckVerticalRay()
+    private void CheckVerticalRay()
     {
         RaycastHit2D hit = Physics2D.BoxCast(new Vector2(boxCollider.bounds.center.x,
             boxCollider.bounds.center.y - boxCollider.bounds.size.y),
             boxCollider.bounds.size, 0f,
-            Vector2.down, Mathf.Infinity);
-        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * hit.distance, Color.yellow);
-
-        if (hit.collider.CompareTag("Player"))
+            Vector2.down, Mathf.Infinity, playerLayerMask);
+        
+        if (hit.collider != null)
         {
-            Debug.Log(hit.collider.gameObject.name);
-            return true;
+            targetFound = true;
         }
-        else return false;
     }
 }
