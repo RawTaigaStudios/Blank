@@ -994,11 +994,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3854403139080525270, guid: 9cea94c32097e6b40bb06d7d1b6121dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.92
+      value: 4.87
       objectReference: {fileID: 0}
     - target: {fileID: 3854403139080525270, guid: 9cea94c32097e6b40bb06d7d1b6121dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.29
+      value: 0.54
       objectReference: {fileID: 0}
     - target: {fileID: 3854403139080525270, guid: 9cea94c32097e6b40bb06d7d1b6121dd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1036,26 +1036,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Damage
       objectReference: {fileID: 0}
+    - target: {fileID: 6647886976955875097, guid: 9cea94c32097e6b40bb06d7d1b6121dd, type: 3}
+      propertyPath: sp
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6647886976955875097, guid: 9cea94c32097e6b40bb06d7d1b6121dd, type: 3}
+      propertyPath: spriteElegido
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6647886976955875097, guid: 9cea94c32097e6b40bb06d7d1b6121dd, type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -2413806693520163455, guid: a1a0da6ea86cb41d98fe57e95fa15f4a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cea94c32097e6b40bb06d7d1b6121dd, type: 3}
---- !u!1 &1609599495 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3854403139080525290, guid: 9cea94c32097e6b40bb06d7d1b6121dd, type: 3}
-  m_PrefabInstance: {fileID: 1609599494}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1609599496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1609599495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb5fc21ee06c94efb858e8f9a7644d9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprites: []
 --- !u!1 &1619818448
 GameObject:
   m_ObjectHideFlags: 0

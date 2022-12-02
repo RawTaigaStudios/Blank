@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3854403139080525270}
   - component: {fileID: 3854403139080525269}
   - component: {fileID: 3854403139080525268}
+  - component: {fileID: 6647886976955875097}
   m_Layer: 6
   m_Name: Damage
   m_TagString: Damage
@@ -111,3 +112,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6647886976955875097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3854403139080525290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb5fc21ee06c94efb858e8f9a7644d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 7482667652216324306, guid: 741faa8e7ee524d8791065b7e89fce1d, type: 3}
+  - {fileID: 7482667652216324306, guid: 848b5a3e3d8714d409e5f8a2c0fd9625, type: 3}
+  spriteElegido: 0
