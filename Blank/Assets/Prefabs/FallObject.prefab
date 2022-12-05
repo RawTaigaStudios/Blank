@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1140369401786238308}
   - component: {fileID: -554220229696324097}
   - component: {fileID: 6636185687176660276}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FallObject
   m_TagString: Damage
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1688038217
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.9614266, g: 1, b: 0, a: 1}
   m_FlipX: 0
@@ -111,7 +111,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.9384552, y: 0.94198304}
   m_EdgeRadius: 0
 --- !u!114 &-554220229696324097
 MonoBehaviour:
@@ -125,13 +125,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc6bef4ed5971444ca4ef17dcfd6025c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 5
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  platformLayerMask:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!50 &6636185687176660276
 Rigidbody2D:
   serializedVersion: 4

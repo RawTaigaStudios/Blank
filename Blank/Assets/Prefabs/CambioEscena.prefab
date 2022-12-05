@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 360092642466648059}
   - component: {fileID: 3877933557301187173}
   m_Layer: 6
-  m_Name: FIN
+  m_Name: CambioEscena
   m_TagString: End
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

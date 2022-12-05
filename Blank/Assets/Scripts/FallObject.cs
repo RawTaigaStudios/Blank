@@ -52,6 +52,7 @@ public class FallObject : MonoBehaviour
         
         if (hit.collider != null)
         {
+            Debug.Log(hit.collider.gameObject.name);
             targetFound = true;
         }
     }
