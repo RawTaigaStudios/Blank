@@ -9,6 +9,7 @@ public class FallObject : MonoBehaviour
 
     [SerializeField] private float speed = 1;
     [SerializeField] private LayerMask playerLayerMask;
+    [SerializeField] private LayerMask platformLayerMask;
     private int platformLayerValue = 6;
 
     private bool targetFound = false;
@@ -46,19 +47,32 @@ public class FallObject : MonoBehaviour
     private void CheckVerticalRay()
     {
         RaycastHit2D hitPlayer = Physics2D.BoxCast(new Vector2(boxCollider.bounds.center.x,
-            boxCollider.bounds.center.y - boxCollider.bounds.size.y / 2),
+            boxCollider.bounds.center.y - boxCollider.bounds.size.y),
             boxCollider.bounds.size, 0f,
             Vector2.down, Mathf.Infinity, playerLayerMask);
         RaycastHit2D hitPlatform = Physics2D.BoxCast(new Vector2(boxCollider.bounds.center.x,
-            boxCollider.bounds.center.y - boxCollider.bounds.size.y / 2),
-            boxCollider.bounds.size, 0f,
-            Vector2.down, Mathf.Infinity, platformLayerValue);
+            boxCollider.bounds.center.y - 3),
+            boxCollider.bounds.size/2, 0f,
+            Vector2.down, Mathf.Infinity, platformLayerMask);
         Debug.Log("Player" + hitPlayer.distance);
         Debug.Log("Platform" + hitPlatform.distance);
         if (hitPlayer.collider != null)
         {
-            Debug.Log("Hit");
-            targetFound = true;
+            if(hitPlatform.collider != null)
+            {
+                if(hitPlatform.distance > hitPlayer.distance)
+                {
+                    Debug.Log("Hit");
+                    targetFound = true;
+                }
+            }
+            else
+            {
+                Debug.Log("Hit");
+                targetFound = true;
+            }
+            
+            
 
 
         }
