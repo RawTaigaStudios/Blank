@@ -23,8 +23,9 @@ public class TriggerText : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Debug.Log("touching");
             texto.SetActive(true);
         }
     }
+
+    
 }
