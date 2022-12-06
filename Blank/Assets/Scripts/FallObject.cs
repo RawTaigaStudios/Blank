@@ -45,15 +45,22 @@ public class FallObject : MonoBehaviour
     }
     private void CheckVerticalRay()
     {
-        RaycastHit2D hit = Physics2D.BoxCast(new Vector2(boxCollider.bounds.center.x,
-            boxCollider.bounds.center.y - boxCollider.bounds.size.y),
+        RaycastHit2D hitPlayer = Physics2D.BoxCast(new Vector2(boxCollider.bounds.center.x,
+            boxCollider.bounds.center.y - boxCollider.bounds.size.y / 2),
             boxCollider.bounds.size, 0f,
             Vector2.down, Mathf.Infinity, playerLayerMask);
-        
-        if (hit.collider != null)
+        RaycastHit2D hitPlatform = Physics2D.BoxCast(new Vector2(boxCollider.bounds.center.x,
+            boxCollider.bounds.center.y - boxCollider.bounds.size.y / 2),
+            boxCollider.bounds.size, 0f,
+            Vector2.down, Mathf.Infinity, platformLayerValue);
+        Debug.Log("Player" + hitPlayer.distance);
+        Debug.Log("Platform" + hitPlatform.distance);
+        if (hitPlayer.collider != null)
         {
-            Debug.Log(hit.collider.gameObject.name);
+            Debug.Log("Hit");
             targetFound = true;
+
+
         }
     }
 }

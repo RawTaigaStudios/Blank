@@ -7057,7 +7057,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameMenu: {fileID: 780660738}
-  optionsMenu: {fileID: 0}
 --- !u!4 &1078729583 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5390435050459841487, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
@@ -13766,6 +13765,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2632735934728437380, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 780660738}
+    - target: {fileID: 2632735934728437380, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 3539195987916360624, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 780660738}
+    - target: {fileID: 3539195987916360624, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 6277139972518894171, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -13866,10 +13881,34 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1078643874}
+    - target: {fileID: 6277139972664870568, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReturnMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277139972664870568, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameCanvasManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277139972664870568, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277139973038479148, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6277139973038479148, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1078643874}
+    - target: {fileID: 6277139973038479148, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ContinueGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277139973038479148, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameCanvasManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8274343514564456093, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -13966,6 +14005,10 @@ PrefabInstance:
     - target: {fileID: 6576073063740227032, guid: 38a281488923e4c1c96f539de2128ea6, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570909350909665780, guid: 38a281488923e4c1c96f539de2128ea6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7955675246036949777, guid: 38a281488923e4c1c96f539de2128ea6, type: 3}
       propertyPath: m_Layer

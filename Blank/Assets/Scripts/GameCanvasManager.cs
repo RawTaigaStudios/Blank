@@ -7,14 +7,12 @@ using UnityEngine.SceneManagement;
 public class GameCanvasManager : MonoBehaviour
 {
     [SerializeField] GameObject gameMenu;
-    [SerializeField] GameObject optionsMenu;
 
     private bool pause;
     // Start is called before the first frame update
     void Start()
     {
         gameMenu.SetActive(false);
-        optionsMenu.SetActive(false);
         pause = false;
     }
 
@@ -24,7 +22,7 @@ public class GameCanvasManager : MonoBehaviour
         if (Input.GetButtonDown("Pause"))
         {
             if (!pause) OpenMenu();
-            else CloseMenu();
+            else ContinueGame();
         }
     }
     public void StartGame()
@@ -33,31 +31,15 @@ public class GameCanvasManager : MonoBehaviour
     }
     public void ContinueGame()
     {
-        CloseMenu();
         pause = false;
+        Time.timeScale = 1;
+        gameMenu.SetActive(false);
     }
     public void OpenMenu()
     {
         Time.timeScale = 0;
         pause = true;
         gameMenu.SetActive(true);
-        CloseOptions();
-    }
-    public void CloseMenu()
-    {
-        Time.timeScale = 1;
-        pause = false;
-        gameMenu.SetActive(false);
-    }
-    public void OpenOptions()
-    {
-        gameMenu.SetActive(false);
-        optionsMenu.SetActive(true);
-    }
-    public void CloseOptions()
-    {
-        gameMenu.SetActive(true);
-        optionsMenu.SetActive(false);
     }
     public void ReturnMainMenu()
     {
