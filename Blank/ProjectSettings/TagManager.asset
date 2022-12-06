@@ -14,11 +14,12 @@ TagManager:
   - Spawner
   - T!Platform
   - PlatMov
+  - Texto
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Textos
   - Water
   - UI
   - Platform
@@ -62,6 +63,9 @@ TagManager:
     locked: 0
   - name: Boxes
     uniqueID: 4085442681
+    locked: 0
+  - name: Textos
+    uniqueID: 1170252175
     locked: 0
   - name: Player
     uniqueID: 2699462053
