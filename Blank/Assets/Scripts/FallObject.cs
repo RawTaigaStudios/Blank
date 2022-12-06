@@ -54,21 +54,18 @@ public class FallObject : MonoBehaviour
             boxCollider.bounds.center.y - 3),
             boxCollider.bounds.size/2, 0f,
             Vector2.down, Mathf.Infinity, platformLayerMask);
-        Debug.Log("Player" + hitPlayer.distance);
-        Debug.Log("Platform" + hitPlatform.distance);
+
         if (hitPlayer.collider != null)
         {
             if(hitPlatform.collider != null)
             {
                 if(hitPlatform.distance > hitPlayer.distance)
                 {
-                    Debug.Log("Hit");
                     targetFound = true;
                 }
             }
             else
             {
-                Debug.Log("Hit");
                 targetFound = true;
             }
             
