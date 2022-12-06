@@ -106,14 +106,23 @@ public class CharacterController : MonoBehaviour
         {
             case "Left":
                 {
-                    if (lastWallSide == 1) jumpCount = 1;
+                    if (lastWallSide == 1 || lastWallSide == 0)
+                    {
+                        jumpCount = 1;
+                        
+                    }
                     canMoveLeft = false;
                     lastWallSide = -1;
                     break;
+                    
                 }
             case "Right":
                 {
-                    if (lastWallSide == -1) jumpCount = 1;
+                    if (lastWallSide == -1 || lastWallSide == 0)
+                    {
+                        jumpCount = 1;
+                        
+                    }
                     canMoveRight = false;
                     lastWallSide = 1;
                     break;
