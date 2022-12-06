@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -30,7 +29,7 @@ public class GameCanvasManager : MonoBehaviour
     }
     public void StartGame()
     {
-        EditorSceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene("Tutorial");
     }
     public void ContinueGame()
     {
@@ -50,7 +49,7 @@ public class GameCanvasManager : MonoBehaviour
     }
     public void ReturnMainMenu()
     {
-        EditorSceneManager.LoadScene("MenuInicial");
+        SceneManager.LoadScene("MenuInicial");
     }
 
 }
