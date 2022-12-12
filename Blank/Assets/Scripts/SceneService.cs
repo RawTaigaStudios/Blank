@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -27,6 +26,6 @@ public class SceneService : MonoBehaviour
 
     public void LoadLevel(string level)
     {
-        EditorSceneManager.LoadScene(level);
+        SceneManager.LoadScene(level);
     }
 }
