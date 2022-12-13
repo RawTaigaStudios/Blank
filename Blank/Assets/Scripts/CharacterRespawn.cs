@@ -29,7 +29,8 @@ public class CharacterRespawn : MonoBehaviour
         {
             StartCoroutine(DeathWait());
         }
-        else if (collision.tag.Equals("Spawner"))
+        else if (collision.tag.Equals("Spawner") &&
+            charSpawner.transform.position != collision.transform.position)
         {
             Debug.Log("SafePoint");
             charSpawner = collision.gameObject;

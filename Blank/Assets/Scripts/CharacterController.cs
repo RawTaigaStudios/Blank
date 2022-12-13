@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Composites;
 using UnityEngine.UI;
 
 public class CharacterController : MonoBehaviour
@@ -34,7 +36,8 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private float speed;
 
     private Animator anim;
-
+    [SerializeField] private InputActionReference moveAction;
+    [SerializeField] private InputActionReference jumpAction;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +50,8 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(moveAction.action.ReadValue<Axis>());
+        if (jumpAction.action.triggered) Debug.Log("Jump");
         if (Input.GetAxis("Horizontal") != 0) Move();
         if (Input.GetButtonDown("Jump") && jumpCount > 0) Jump();
         if (isGrounded() && canCheckGround)
