@@ -36,6 +36,8 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private float speed;
 
     private Animator anim;
+
+    [SerializeField] private PlayerInput inputs;
     [SerializeField] private InputActionReference moveAction;
     [SerializeField] private InputActionReference jumpAction;
     // Start is called before the first frame update
@@ -50,10 +52,10 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(moveAction.action.ReadValue<Axis>());
-        if (jumpAction.action.triggered) Debug.Log("Jump");
-        if (Input.GetAxis("Horizontal") != 0) Move();
-        if (Input.GetButtonDown("Jump") && jumpCount > 0) Jump();
+        
+        if (inputs.actions["Jump"].triggered) Debug.Log("Jump");
+        Move();
+        if (jumpAction.action.triggered && jumpCount > 0) Jump();
         if (isGrounded() && canCheckGround)
         {
             anim.SetBool("Grounded", true);
@@ -66,7 +68,20 @@ public class CharacterController : MonoBehaviour
 
     void Move()
     {
-        float moveDirection = Input.GetAxis("Horizontal");
+        float moveDirection = 0;
+        if (inputs.actions["Right"].IsPressed() && !inputs.actions["Left"].triggered)
+        {
+            moveDirection = 1;
+        }
+        else if (inputs.actions["Left"].IsPressed() && !inputs.actions["Right"].triggered)
+        {
+            moveDirection = -1;
+        }
+        else
+        {
+            moveDirection = 0;
+        }
+        
         if(moveDirection > 0 && canMoveRight)
         {
             anim.SetFloat("xVelocity", 1f);

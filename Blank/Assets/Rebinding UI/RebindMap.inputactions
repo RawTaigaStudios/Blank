@@ -15,13 +15,22 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "HorizontalMove",
-                    "type": "Value",
+                    "name": "Left",
+                    "type": "Button",
+                    "id": "87f219e6-ad41-47f6-bf99-d14f78085f82",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Right",
+                    "type": "Button",
                     "id": "0c855123-11b7-4f21-bbc1-62a85042466d",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Swap",
@@ -55,37 +64,15 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "1D Axis",
-                    "id": "2e616658-8381-4fca-b622-496a60bd35a4",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HorizontalMove",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "97f4b8af-ce34-494e-a6f3-cc2db71bbbff",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HorizontalMove",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "fe7a3ba2-e4d6-438d-a368-e7243e580bfb",
+                    "name": "",
+                    "id": "296e4bb2-faa9-4440-8f88-81314f3e1f1a",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "HorizontalMove",
+                    "action": "Right",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 },
                 {
                     "name": "",
@@ -106,6 +93,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cb11c178-5f39-4669-b3cf-79a420967793",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
