@@ -2988,6 +2988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7710eb928f6648e7918bb75c9f5cc96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
   swap: {fileID: 8545558876132181340, guid: eb87cabf0c15240cb93fbf391e83bd36, type: 3}
 --- !u!4 &359542762
 Transform:
@@ -4273,7 +4274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5299099564472856263, guid: 4f7e99da87a5e4adfa14b37098592aad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.010147
+      value: 17.010147
       objectReference: {fileID: 0}
     - target: {fileID: 5299099564472856263, guid: 4f7e99da87a5e4adfa14b37098592aad, type: 3}
       propertyPath: m_LocalPosition.z
