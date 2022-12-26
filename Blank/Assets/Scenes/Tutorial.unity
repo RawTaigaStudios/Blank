@@ -12068,7 +12068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7046749589924493140, guid: 2cfbd975722204ab0a63cce750e3f412, type: 3}
       propertyPath: m_LocalScale.y
-      value: 8.00035
+      value: 9.000394
       objectReference: {fileID: 0}
     - target: {fileID: 7046749589924493140, guid: 2cfbd975722204ab0a63cce750e3f412, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12076,7 +12076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7046749589924493140, guid: 2cfbd975722204ab0a63cce750e3f412, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -129.23338
+      value: -128.73338
       objectReference: {fileID: 0}
     - target: {fileID: 7046749589924493140, guid: 2cfbd975722204ab0a63cce750e3f412, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15114,6 +15114,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -7117464123868421965, guid: eb87cabf0c15240cb93fbf391e83bd36, type: 3}
     - target: {fileID: 6576073063119849212, guid: 38a281488923e4c1c96f539de2128ea6, type: 3}
+      propertyPath: wallJumpTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6576073063119849212, guid: 38a281488923e4c1c96f539de2128ea6, type: 3}
       propertyPath: inputController
       value: 
       objectReference: {fileID: 2090716769}
@@ -15132,6 +15136,10 @@ PrefabInstance:
     - target: {fileID: 6576073063119849212, guid: 38a281488923e4c1c96f539de2128ea6, type: 3}
       propertyPath: moveAction.m_Name
       value: Move
+      objectReference: {fileID: 0}
+    - target: {fileID: 6576073063119849212, guid: 38a281488923e4c1c96f539de2128ea6, type: 3}
+      propertyPath: wallJumpMultiplier
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6576073063119849212, guid: 38a281488923e4c1c96f539de2128ea6, type: 3}
       propertyPath: inputController.m_Id

@@ -24,6 +24,8 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private float gravityAttaWall;
     [SerializeField] private float gravityNormal;
     [SerializeField] private int maxJumpCount = 2;
+    [SerializeField] private float wallJumpMultiplier;
+    [SerializeField] private float wallJumpTimer;
 
     private int jumpCount;
     private int lastWallSide;
@@ -38,8 +40,6 @@ public class CharacterController : MonoBehaviour
     private Animator anim;
 
     [SerializeField] private PlayerInput inputs;
-    [SerializeField] private InputActionReference moveAction;
-    [SerializeField] private InputActionReference jumpAction;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,10 +52,8 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (inputs.actions["Jump"].triggered) Debug.Log("Jump");
         Move();
-        if (jumpAction.action.triggered && jumpCount > 0) Jump();
+        if (inputs.actions["Jump"].triggered && jumpCount > 0) Jump();
         if (isGrounded() && canCheckGround)
         {
             anim.SetBool("Grounded", true);
@@ -65,9 +63,15 @@ public class CharacterController : MonoBehaviour
         isAttachedWall();
 
     }
-
+    private IEnumerator WallJump(string side)
+    {
+        inputs.actions[side].Disable();
+        yield return new WaitForSeconds(wallJumpTimer);
+        inputs.actions[side].Enable();
+    }
     void Move()
     {
+        
         float moveDirection = 0;
         if (inputs.actions["Right"].IsPressed() && !inputs.actions["Left"].triggered)
         {
@@ -113,10 +117,7 @@ public class CharacterController : MonoBehaviour
             }
 
         }
-        catch
-        {
-            Debug.Log("No hay collider");
-        }
+        catch { }
 
         return raycastHit;
     }
@@ -184,7 +185,21 @@ public class CharacterController : MonoBehaviour
     {
         anim.SetBool("Grounded", false);
         anim.SetTrigger("Jump");
-        rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.fixedDeltaTime);
+        if (!canMoveLeft)
+        {
+            rb.AddForce(new Vector2(speed, jumpForce) * wallJumpMultiplier);
+            //StartCoroutine(WallJump("Left"));
+        }
+        else if (!canMoveRight)
+        {
+            rb.AddForce(new Vector2(-speed, jumpForce) * wallJumpMultiplier);
+            //StartCoroutine(WallJump("Right"));
+        }
+        else
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.fixedDeltaTime);
+
+        }
         jumpCount--;
         StartCoroutine(JumpLapse());
     }
