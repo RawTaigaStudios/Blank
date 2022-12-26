@@ -889,6 +889,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55671873}
     m_Modifications:
+    - target: {fileID: -3741106507825784519, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4808587173004865885, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
       propertyPath: m_Name
       value: T2Plat (15)
@@ -954,6 +958,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55671873}
     m_Modifications:
+    - target: {fileID: -3741106507825784519, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4808587173004865885, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
       propertyPath: m_Name
       value: T2Plat (16)
@@ -1704,6 +1712,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420578604}
     m_Modifications:
+    - target: {fileID: 2024549778101734342, guid: 4f7e99da87a5e4adfa14b37098592aad, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3765413834190897852, guid: 4f7e99da87a5e4adfa14b37098592aad, type: 3}
       propertyPath: m_Name
       value: T1Plat (1)
@@ -2111,6 +2123,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55671873}
     m_Modifications:
+    - target: {fileID: -3741106507825784519, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4808587173004865885, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
       propertyPath: m_Name
       value: T2Plat (22)
@@ -2988,8 +3004,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7710eb928f6648e7918bb75c9f5cc96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 1120199535}
   swap: {fileID: 8545558876132181340, guid: eb87cabf0c15240cb93fbf391e83bd36, type: 3}
+  platformLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!4 &359542762
 Transform:
   m_ObjectHideFlags: 0
@@ -3172,6 +3191,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420578604}
     m_Modifications:
+    - target: {fileID: 2024549778101734342, guid: 4f7e99da87a5e4adfa14b37098592aad, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3765413834190897852, guid: 4f7e99da87a5e4adfa14b37098592aad, type: 3}
       propertyPath: m_Name
       value: T1Plat (12)
@@ -4252,6 +4275,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420578604}
     m_Modifications:
+    - target: {fileID: 2024549778101734342, guid: 4f7e99da87a5e4adfa14b37098592aad, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3765413834190897852, guid: 4f7e99da87a5e4adfa14b37098592aad, type: 3}
       propertyPath: m_Name
       value: T1Plat (11)
@@ -7078,6 +7105,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55671873}
     m_Modifications:
+    - target: {fileID: -3741106507825784519, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4808587173004865885, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
       propertyPath: m_Name
       value: T2Plat (1)
@@ -8192,6 +8223,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55671873}
     m_Modifications:
+    - target: {fileID: -3741106507825784519, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4808587173004865885, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
       propertyPath: m_Name
       value: T2Plat (2)
@@ -8376,6 +8411,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420578604}
     m_Modifications:
+    - target: {fileID: 2024549778101734342, guid: 4f7e99da87a5e4adfa14b37098592aad, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3765413834190897852, guid: 4f7e99da87a5e4adfa14b37098592aad, type: 3}
       propertyPath: m_Name
       value: T1Plat (4)
@@ -9738,6 +9777,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55671873}
     m_Modifications:
+    - target: {fileID: -3741106507825784519, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4808587173004865885, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
       propertyPath: m_Name
       value: T2Plat (17)
@@ -10238,6 +10281,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420578604}
     m_Modifications:
+    - target: {fileID: 2024549778101734342, guid: 4f7e99da87a5e4adfa14b37098592aad, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3765413834190897852, guid: 4f7e99da87a5e4adfa14b37098592aad, type: 3}
       propertyPath: m_Name
       value: T1Plat (14)
@@ -10377,6 +10424,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55671873}
     m_Modifications:
+    - target: {fileID: -3741106507825784519, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4808587173004865885, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
       propertyPath: m_Name
       value: T2Plat (6)
@@ -11320,6 +11371,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55671873}
     m_Modifications:
+    - target: {fileID: -3741106507825784519, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4808587173004865885, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
       propertyPath: m_Name
       value: T2Plat (12)
@@ -12645,6 +12700,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55671873}
     m_Modifications:
+    - target: {fileID: -3741106507825784519, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4808587173004865885, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
       propertyPath: m_Name
       value: T2Plat (21)
@@ -12710,6 +12769,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420578604}
     m_Modifications:
+    - target: {fileID: 2024549778101734342, guid: 4f7e99da87a5e4adfa14b37098592aad, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3765413834190897852, guid: 4f7e99da87a5e4adfa14b37098592aad, type: 3}
       propertyPath: m_Name
       value: T1Plat (3)
@@ -14171,6 +14234,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420578604}
     m_Modifications:
+    - target: {fileID: 2024549778101734342, guid: 4f7e99da87a5e4adfa14b37098592aad, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3765413834190897852, guid: 4f7e99da87a5e4adfa14b37098592aad, type: 3}
       propertyPath: m_Name
       value: T1Plat (5)
@@ -14490,6 +14557,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55671873}
     m_Modifications:
+    - target: {fileID: -3741106507825784519, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4808587173004865885, guid: e36a4c54e4edc4b0ca4d560867f63355, type: 3}
       propertyPath: m_Name
       value: T2Plat (14)

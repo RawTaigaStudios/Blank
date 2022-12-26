@@ -101,6 +101,23 @@ public class CharacterController : MonoBehaviour
         RaycastHit2D raycastHit = Physics2D.BoxCast
             (boxCollider.bounds.center, size, 0f,
              Vector2.down, colliderHeight, PlatformLayerMask);
+        try
+        {
+            if (!raycastHit.collider.gameObject.GetComponent<BoxCollider2D>().isTrigger)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        catch
+        {
+            Debug.Log("No hay collider");
+        }
+
         return raycastHit;
     }
     void isAttachedWall()
