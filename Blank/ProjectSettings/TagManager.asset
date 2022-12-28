@@ -24,7 +24,7 @@ TagManager:
   - UI
   - Platform
   - Player
-  - 
+  - Decoration
   - 
   - 
   - 
@@ -69,4 +69,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2699462053
+    locked: 0
+  - name: Decoration
+    uniqueID: 2676802725
     locked: 0
