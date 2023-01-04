@@ -133,7 +133,7 @@ AnimatorController:
     m_Controller: {fileID: 0}
   - m_Name: xVelocity
     m_Type: 1
-    m_DefaultFloat: 0
+    m_DefaultFloat: 1
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
@@ -159,7 +159,7 @@ BlendTree:
   m_Name: BlendWalk
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 9977eba4d3743438baf883d34074e0a5, type: 2}
+    m_Motion: {fileID: 7400000, guid: 5a099f61f2fd2be4597105def4482a4a, type: 2}
     m_Threshold: -1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -167,7 +167,7 @@ BlendTree:
     m_DirectBlendParameter: xVelocity
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 74f285aaf773d4c41821ed51829324f4, type: 2}
+    m_Motion: {fileID: 7400000, guid: 977d923e857c0e945a08956ce4413c69, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -175,7 +175,7 @@ BlendTree:
     m_DirectBlendParameter: xVelocity
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 9977eba4d3743438baf883d34074e0a5, type: 2}
+    m_Motion: {fileID: 7400000, guid: 6b1ae000f9bb77d4a875ca4e38d7b104, type: 2}
     m_Threshold: 1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
