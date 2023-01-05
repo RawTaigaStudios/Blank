@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca167de2311c8c40a1471a0fb799ce5, type: 3}
+  m_Name: Prologue
+  m_EditorClassIdentifier: 
+  hasPlayed: 1
+  canRepeat: 0
+  allLines:
+  - speaker: {fileID: 11400000, guid: 79a26abf8764b4de99f46f47c8b5e865, type: 2}
+    dialogue: "\xBFD\xF3nde estoy?"
+  - speaker: {fileID: 11400000, guid: 5b0e121e4830d4c71882d0b34c5a9513, type: 2}
+    dialogue: Bienvenida, Lyr.
+  - speaker: {fileID: 11400000, guid: 79a26abf8764b4de99f46f47c8b5e865, type: 2}
+    dialogue: "\xBFQui\xE9n eres?"
+  - speaker: {fileID: 11400000, guid: 5b0e121e4830d4c71882d0b34c5a9513, type: 2}
+    dialogue: 'Parece que no me reconoces, no te asustes por lo que te voy a decir.
+
+'
+  - speaker: {fileID: 11400000, guid: 79a26abf8764b4de99f46f47c8b5e865, type: 2}
+    dialogue: "\xBFAsustarme?"
+  - speaker: {fileID: 11400000, guid: 5b0e121e4830d4c71882d0b34c5a9513, type: 2}
+    dialogue: "Soy la representaci\xF3n de la muerte seg\xFAn tus pensamientos, me
+      dedico a liberar las almas de aquellas personas que no terminaron de aceptar
+      su muerte.\n"
+  - speaker: {fileID: 11400000, guid: 5b0e121e4830d4c71882d0b34c5a9513, type: 2}
+    dialogue: "Puede ser mucha informaci\xF3n a la vez, pero Lyr, est\xE1s muerta,
+      y ahora mismo te encuentras en un vac\xEDo del que te voy a ayudar a salir,
+      aceptando y dejando atr\xE1s la duda que sientes en estos momentos.\n"
+  - speaker: {fileID: 11400000, guid: 5b0e121e4830d4c71882d0b34c5a9513, type: 2}
+    dialogue: Pienso ayudarte en el camino, no te preocupes.
+  - speaker: {fileID: 11400000, guid: 5b0e121e4830d4c71882d0b34c5a9513, type: 2}
+    dialogue: "Siempre estar\xE9 contigo."
+  - speaker: {fileID: 11400000, guid: 79a26abf8764b4de99f46f47c8b5e865, type: 2}
+    dialogue: "Esto no puede ser real... No puede estar pasando... \xA1D\xE9jame
+      salir de aqu\xED! Es una pesadilla..."
+  - speaker: {fileID: 11400000, guid: 5b0e121e4830d4c71882d0b34c5a9513, type: 2}
+    dialogue: "La t\xFAnica que llevas te va a ser de gran ayuda durante tu viaje
+      por este mundo."
+  - speaker: {fileID: 11400000, guid: 5b0e121e4830d4c71882d0b34c5a9513, type: 2}
+    dialogue: "Estar\xE1s sola durante tu viaje, puesto que tienes que entender t\xFA
+      misma la situaci\xF3n por la que est\xE1s pasando para poder aceptarla.\n"
+  - speaker: {fileID: 11400000, guid: 5b0e121e4830d4c71882d0b34c5a9513, type: 2}
+    dialogue: "Debes buscar a Winslow el Ferrocarril, \xE9l te ayudar\xE1 a contactar
+      conmigo m\xE1s adelante.\n"
+  - speaker: {fileID: 11400000, guid: 5b0e121e4830d4c71882d0b34c5a9513, type: 2}
+    dialogue: "Te estar\xE9 vigilando, conf\xEDo en ti."
+  - speaker: {fileID: 11400000, guid: 79a26abf8764b4de99f46f47c8b5e865, type: 2}
+    dialogue: "Yo no deber\xEDa estar aqu\xED, tiene que ser un error..."
