@@ -26,6 +26,9 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private int maxJumpCount = 2;
     [SerializeField] private float wallJumpMultiplier;
     [SerializeField] private float wallJumpTimer;
+    [SerializeField] private AudioSource jumpSoundEffect; //prueba
+    //[SerializeField] private AudioSource walkSoundEffect; //prueba
+
 
     private int jumpCount;
     private int lastWallSide;
@@ -61,7 +64,6 @@ public class CharacterController : MonoBehaviour
             lastWallSide = 0;
         }
         isAttachedWall();
-
     }
     private IEnumerator WallJump(string side)
     {
@@ -78,7 +80,7 @@ public class CharacterController : MonoBehaviour
             moveDirection = 1;
         }
         else if (inputs.actions["Left"].IsPressed() && !inputs.actions["Right"].triggered)
-        {
+        {   
             moveDirection = -1;
         }
         else
@@ -187,16 +189,19 @@ public class CharacterController : MonoBehaviour
         anim.SetTrigger("Jump");
         if (!canMoveLeft)
         {
+            jumpSoundEffect.Play();
             rb.AddForce(new Vector2(speed, jumpForce) * wallJumpMultiplier);
             //StartCoroutine(WallJump("Left"));
         }
         else if (!canMoveRight)
         {
+            jumpSoundEffect.Play();
             rb.AddForce(new Vector2(-speed, jumpForce) * wallJumpMultiplier);
             //StartCoroutine(WallJump("Right"));
         }
         else
         {
+            jumpSoundEffect.Play();
             rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.fixedDeltaTime);
 
         }

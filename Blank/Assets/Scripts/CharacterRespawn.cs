@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class CharacterRespawn : MonoBehaviour
 {
     [SerializeField]private GameObject charSpawner;
+    [SerializeField] private AudioSource deathSoundEffect;
+
     private SpriteRenderer sprite;
     private CharacterController controller;
     private Rigidbody2D rb;
@@ -27,6 +29,7 @@ public class CharacterRespawn : MonoBehaviour
     {
         if (collision.tag == "Damage")
         {
+            deathSoundEffect.Play();
             StartCoroutine(DeathWait());
         }
         else if (collision.tag.Equals("Spawner") &&
