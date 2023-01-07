@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1140369401786238308}
   - component: {fileID: -554220229696324097}
   - component: {fileID: 6636185687176660276}
+  - component: {fileID: 2448162298836125519}
   m_Layer: 6
   m_Name: FallObject
   m_TagString: Damage
@@ -153,3 +154,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2448162298836125519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55793639807697551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e484a171b9f3844ae997e1e13376086c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 50ade7a21281ac64b8f37ebb19ff0ccc, type: 3}
+  - {fileID: 21300000, guid: 5f90b3549541a8e4888dfabc0975cc95, type: 3}
+  spriteElegido: 0

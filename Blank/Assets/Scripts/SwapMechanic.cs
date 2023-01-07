@@ -1,10 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class SwapMechanic : MonoBehaviour
 {
+    public static SwapMechanic instance;
+
+    public event Action SwapColor;
+
     private GameObject[] Type1Platforms, Type2Platforms;
 
     [SerializeField]
@@ -14,6 +20,10 @@ public class SwapMechanic : MonoBehaviour
     private LayerMask platformLayer;
 
     //private BoxCollider2D boxCollider;
+    private void Awake()
+    {
+        instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +75,10 @@ public class SwapMechanic : MonoBehaviour
     {
         if (CheckSwap())
         {
+            if(SwapColor != null)
+            {
+                SwapColor();
+            }
             foreach (GameObject go in Type1Platforms)
             {
                 var col = go.GetComponent<Renderer>().material.color;

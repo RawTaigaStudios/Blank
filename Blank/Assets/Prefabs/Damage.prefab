@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3854403139080525269}
   - component: {fileID: 3854403139080525268}
   - component: {fileID: 6647886976955875097}
+  - component: {fileID: 694226829955160269}
   m_Layer: 6
   m_Name: Damage
   m_TagString: Damage
@@ -128,3 +129,19 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 741faa8e7ee524d8791065b7e89fce1d, type: 3}
   - {fileID: 21300000, guid: 50486ea1e8bbd474eb39b5fcad44b1a8, type: 3}
   spriteElegido: 1
+--- !u!114 &694226829955160269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3854403139080525290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e484a171b9f3844ae997e1e13376086c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 50486ea1e8bbd474eb39b5fcad44b1a8, type: 3}
+  - {fileID: 21300000, guid: d5e518c2d33554b49a7a960f1ab0da20, type: 3}
+  spriteElegido: 0
