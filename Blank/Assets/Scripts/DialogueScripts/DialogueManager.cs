@@ -74,7 +74,7 @@ public class DialogueManager : MonoBehaviour
             if (currentIndex > currentConvo.GetLength())//comprueba que  la converasci?n no se haya acabado 
             {
             Debug.Log("End");
-            //currentConvo.hasPlayed = true;
+                currentConvo.hasPlayed = true;
                 instance.anime.SetBool("DialogueOn", false);//si SI lo ha hecho desactiva el booleano del animador
                 Talking = false;//tambi?n el booleano del movimiento
                 return;//se sale de la funci?n

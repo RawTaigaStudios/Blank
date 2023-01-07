@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca167de2311c8c40a1471a0fb799ce5, type: 3}
   m_Name: Prologue
   m_EditorClassIdentifier: 
-  hasPlayed: 1
-  canRepeat: 0
+  hasPlayed: 0
+  canRepeat: 1
   allLines:
   - speaker: {fileID: 11400000, guid: 79a26abf8764b4de99f46f47c8b5e865, type: 2}
     dialogue: "\xBFD\xF3nde estoy?"

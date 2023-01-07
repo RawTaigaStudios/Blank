@@ -29,7 +29,10 @@ public class dialogtrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (convo.hasPlayed)
+        {
+            dialogueEvents.Invoke();
+        }
 
     }
     public void LoadScene(string sceneName)
