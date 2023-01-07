@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &602943929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2986026589681714547, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
+  m_PrefabInstance: {fileID: 959681346}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &816965421
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +221,7 @@ PrefabInstance:
     - target: {fileID: 3539195987916360624, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 959681347}
+      objectReference: {fileID: 602943929}
     - target: {fileID: 3539195987916360624, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
@@ -343,7 +348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6277139973038479148, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Tutorial
+      value: Prologo
       objectReference: {fileID: 0}
     - target: {fileID: 6277139973507661525, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
       propertyPath: m_IsActive

@@ -83,6 +83,7 @@ public class GameData : MonoBehaviour
         File.WriteAllText(saveFile, jsonString);
         UnityEngine.Debug.Log("Fichero modificado");
     }
+    /*
     private void OnGUI()
     {
         if (GUI.Button(new Rect(20, 40, 80, 20), "Value ++"))
@@ -117,5 +118,5 @@ public class GameData : MonoBehaviour
 
         }
         GUI.Box(new Rect(10, 10, 100, 90), gameData.maxLevel.ToString());
-    }
+    }*/
 }
