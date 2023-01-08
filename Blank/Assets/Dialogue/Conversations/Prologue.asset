@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasPlayed: 0
   canRepeat: 1
+  playOnStart: 1
   allLines:
   - speaker: {fileID: 11400000, guid: 79a26abf8764b4de99f46f47c8b5e865, type: 2}
     dialogue: "\xBFD\xF3nde estoy?"

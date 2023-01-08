@@ -8,6 +8,7 @@ public class Conversation : ScriptableObject
     
     public bool hasPlayed = false;
     public bool canRepeat = true;
+    public bool playOnStart = false;
     public DialogueLine[] allLines;
     public DialogueLine GetLineByIndex(int index)
     {

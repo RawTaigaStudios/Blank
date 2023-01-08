@@ -23,7 +23,7 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private float gravityAttaWall;
     [SerializeField] private float gravityNormal;
-    [SerializeField] private int maxJumpCount = 2;
+    private int maxJumpCount = 1;
     [SerializeField] private float wallJumpMultiplier;
     [SerializeField] private float wallJumpTimer;
     [SerializeField] private AudioSource jumpSoundEffect; //prueba
@@ -191,13 +191,11 @@ public class CharacterController : MonoBehaviour
         {
             jumpSoundEffect.Play();
             rb.AddForce(new Vector2(speed, jumpForce) * wallJumpMultiplier);
-            //StartCoroutine(WallJump("Left"));
         }
         else if (!canMoveRight)
         {
             jumpSoundEffect.Play();
             rb.AddForce(new Vector2(-speed, jumpForce) * wallJumpMultiplier);
-            //StartCoroutine(WallJump("Right"));
         }
         else
         {
@@ -223,6 +221,10 @@ public class CharacterController : MonoBehaviour
         {
             transform.parent = null;
         }
+    }
+    public void UnlockDoubleJump()
+    {
+        maxJumpCount = 2;
     }
 
 }

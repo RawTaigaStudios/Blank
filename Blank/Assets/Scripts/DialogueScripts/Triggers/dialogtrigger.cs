@@ -9,17 +9,17 @@ public class dialogtrigger : MonoBehaviour
 {
     public Conversation convo;
 
-    public UnityEvent dialogueEvents;
+    public UnityEvent dialogueStart;
+    public UnityEvent dialogueEnded;
     // Start is called before the first frame update
     void Start()
     {
+
         if (convo.canRepeat)
         {
             convo.hasPlayed = false;
-            StartCoroutine(ConversationStartedDelay());
-            DialogueManager.StartConversation(convo);
         }
-        else if(!convo.canRepeat || convo.hasPlayed == false)
+        if(convo.hasPlayed == false && convo.playOnStart)
         {
             StartCoroutine(ConversationStartedDelay());
             DialogueManager.StartConversation(convo);
@@ -31,10 +31,25 @@ public class dialogtrigger : MonoBehaviour
     {
         if (convo.hasPlayed)
         {
-            dialogueEvents.Invoke();
+            dialogueEnded.Invoke();
         }
 
     }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            dialogueStart.Invoke();
+            Debug.Log("Encontrado player");
+            convo.hasPlayed = false;
+            DialogueManager.instance.canSkipDialogue = true;
+            DialogueManager.StartConversation(convo);
+            //StartCoroutine(ConversationStartedDelay());
+            Debug.Log(DialogueManager.instance.canSkipDialogue);
+        }
+    }
+
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
@@ -43,7 +58,7 @@ public class dialogtrigger : MonoBehaviour
     {
         DialogueManager.instance.canSkipDialogue = false;
 
-        yield return new WaitForSeconds(DialogueManager.instance.anime.GetCurrentAnimatorStateInfo(0).normalizedTime);
+        yield return new WaitForSeconds(0.2f);
 
         DialogueManager.instance.canSkipDialogue = true;
     }
