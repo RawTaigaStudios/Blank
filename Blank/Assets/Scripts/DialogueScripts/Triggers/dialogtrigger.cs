@@ -11,6 +11,7 @@ public class dialogtrigger : MonoBehaviour
 
     public UnityEvent dialogueStart;
     public UnityEvent dialogueEnded;
+
     // Start is called before the first frame update
     void Start()
     {

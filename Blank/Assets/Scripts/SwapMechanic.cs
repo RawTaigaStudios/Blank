@@ -19,6 +19,8 @@ public class SwapMechanic : MonoBehaviour
     [SerializeField]
     private LayerMask platformLayer;
 
+    [SerializeField] private AudioSource skillSoundEffect;
+
     //private BoxCollider2D boxCollider;
     private void Awake()
     {
@@ -49,6 +51,7 @@ public class SwapMechanic : MonoBehaviour
     {
         if (swap.action.triggered)
         {
+            skillSoundEffect.Play();
             SwapMech();
 
             
