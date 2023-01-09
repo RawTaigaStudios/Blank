@@ -319,7 +319,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   convo: {fileID: 11400000, guid: 74a21bd2a06a9445aa098b878b95a182, type: 2}
-  dialogueEvents:
+  dialogueStart:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogueEnded:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1549875537}
