@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 9204559210867388080}
   - component: {fileID: 9204559210867388081}
   - component: {fileID: 9204559210867388089}
+  - component: {fileID: 1962475816}
   m_Layer: 7
   m_Name: Character
   m_TagString: Player
@@ -65,7 +66,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.7388458, y: 5.484274}
+  m_Size: {x: 1.9820317, y: 5.484274}
   m_EdgeRadius: 0
 --- !u!50 &9204559211961781727
 Rigidbody2D:
@@ -106,7 +107,6 @@ MonoBehaviour:
   jumpForce: 675
   gravityAttaWall: 1
   gravityNormal: 5
-  maxJumpCount: 2
   wallJumpMultiplier: 2
   wallJumpTimer: 1
   jumpSoundEffect: {fileID: 9204559210867388080}
@@ -260,10 +260,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 130a177e727814a2ea78a886ab72213d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.48
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -452,11 +452,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4dcd8f2dc477f5e4aa277ee503048ee8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 50d72a013f13ce0488147b799a838890, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
+  m_Pitch: 0.93
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -538,3 +538,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1962475816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204559211961781696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841dfbaa11b25ed429f8610d8eaceb3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSoundEffect: {fileID: 9204559210867388089}
