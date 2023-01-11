@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8561868120921866632}
   - component: {fileID: 643547520100761027}
   - component: {fileID: 9046797756282934563}
+  - component: {fileID: 4802365915101344333}
   m_Layer: 6
   m_Name: PlatMov
   m_TagString: PlatMov
@@ -128,3 +129,17 @@ MonoBehaviour:
   puntoIni: {fileID: 0}
   puntoFin: {fileID: 0}
   velocidad: 2.3
+--- !u!114 &4802365915101344333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6262506316873694773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e484a171b9f3844ae997e1e13376086c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites: []
+  spriteElegido: 0

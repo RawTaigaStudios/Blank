@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.Tilemaps;
 
 public class SwapMechanic : MonoBehaviour
 {
     public static SwapMechanic instance;
 
+    public UnityEvent ManualSpriteSwap;
     public event Action SwapColor;
 
     private GameObject[] Type1Platforms, Type2Platforms;
@@ -41,7 +43,7 @@ public class SwapMechanic : MonoBehaviour
             if (col.a == 0.5f) col.a = 1;
             else if (col.a == 1) col.a = 0.5f;
             go.GetComponent<Renderer>().material.color = col;
-            go.GetComponent<BoxCollider2D>().isTrigger = !go.GetComponent<BoxCollider2D>().isTrigger;
+            go.GetComponent<CompositeCollider2D>().isTrigger = !go.GetComponent<CompositeCollider2D>().isTrigger;
 
         }
     }
@@ -82,13 +84,14 @@ public class SwapMechanic : MonoBehaviour
             {
                 SwapColor();
             }
+            ManualSpriteSwap.Invoke();
             foreach (GameObject go in Type1Platforms)
             {
                 var col = go.GetComponent<Renderer>().material.color;
                 if (col.a == 0.5f) col.a = 1;
                 else if (col.a == 1) col.a = 0.5f;
                 go.GetComponent<Renderer>().material.color = col;
-                go.GetComponent<BoxCollider2D>().isTrigger = !go.GetComponent<BoxCollider2D>().isTrigger;
+                go.GetComponent<CompositeCollider2D>().isTrigger = !go.GetComponent<CompositeCollider2D>().isTrigger;
             }
             foreach (GameObject go in Type2Platforms)
             {
@@ -96,10 +99,21 @@ public class SwapMechanic : MonoBehaviour
                 if (col.a == 0.5f) col.a = 1;
                 else if (col.a == 1) col.a = 0.5f;
                 go.GetComponent<Renderer>().material.color = col;
-                go.GetComponent<BoxCollider2D>().isTrigger = !go.GetComponent<BoxCollider2D>().isTrigger;
+                go.GetComponent<CompositeCollider2D>().isTrigger = !go.GetComponent<CompositeCollider2D>().isTrigger;
             }
         }
         
 
+    }
+    public void SwapGameObject(GameObject go)
+    {
+        try
+        {
+            go.GetComponent<TilemapRenderer>().enabled = !go.GetComponent<TilemapRenderer>().enabled;
+        }
+        catch
+        {
+            Debug.Log("No tilemapRenderer en " + go.name);
+        }
     }
 }

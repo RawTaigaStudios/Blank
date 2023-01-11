@@ -29,18 +29,24 @@ public class ColorSprites : MonoBehaviour
     }
     public void SwapSprite()
     {
-        Debug.Log("Swaping Sprite");
-        Debug.Log(spriteElegido);
-            if (spriteElegido >= sprites.Length - 1)
+        try
+        {
+            if (sprites.Length > 0)
             {
-                spriteElegido = 0;
+                if (spriteElegido >= sprites.Length - 1)
+                {
+                    spriteElegido = 0;
+                }
+                else
+                {
+                    spriteElegido++;
+                }
+                spriteRenderer.sprite = sprites[spriteElegido];
             }
-            else
-            {
-                spriteElegido++;
-            }
-            spriteRenderer.sprite = sprites[spriteElegido];
-        
-        
+        }
+        catch
+        {
+            Debug.Log("El objeto no existe");
+        }
     }
 }
