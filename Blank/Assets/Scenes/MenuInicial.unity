@@ -206,6 +206,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2140861438957321956, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
+      propertyPath: m_text
+      value: Play
+      objectReference: {fileID: 0}
     - target: {fileID: 2632735934728437380, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -213,6 +217,10 @@ PrefabInstance:
     - target: {fileID: 2632735934728437380, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 2674217889743450391, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2986026589681714547, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
       propertyPath: m_IsActive
@@ -226,6 +234,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
+    - target: {fileID: 5305895758718934490, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+    - target: {fileID: 5305895758718934490, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
     - target: {fileID: 6277139972518894171, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -314,6 +330,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6277139972593577838, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
+      propertyPath: m_text
+      value: Blank
+      objectReference: {fileID: 0}
     - target: {fileID: 6277139972664870568, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -357,6 +377,18 @@ PrefabInstance:
     - target: {fileID: 6620328628075070606, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408595733134383518, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427543440753109706, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233389859293817454, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8274343514564456093, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
       propertyPath: m_AnchorMax.y
@@ -413,7 +445,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.5764706, g: 0.427451, b: 0.6745098, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

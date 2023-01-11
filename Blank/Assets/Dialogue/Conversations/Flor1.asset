@@ -17,6 +17,5 @@ MonoBehaviour:
   playOnStart: 0
   allLines:
   - speaker: {fileID: 11400000, guid: 79a26abf8764b4de99f46f47c8b5e865, type: 2}
-    dialogue: Hola
-  - speaker: {fileID: 11400000, guid: 79a26abf8764b4de99f46f47c8b5e865, type: 2}
-    dialogue: Has recogido tu primera flor
+    dialogue: "Has recogido tu primera flor, m\xE1s adelante podr\xE1s ver partes
+      de la historia que por el momento est\xE1n ocultas"

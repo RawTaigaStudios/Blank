@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca167de2311c8c40a1471a0fb799ce5, type: 3}
   m_Name: DoubleJump
   m_EditorClassIdentifier: 
-  hasPlayed: 1
+  hasPlayed: 0
   canRepeat: 1
   playOnStart: 0
   allLines:
-  - speaker: {fileID: 11400000, guid: 5b0e121e4830d4c71882d0b34c5a9513, type: 2}
-    dialogue: Hola
   - speaker: {fileID: 11400000, guid: 5b0e121e4830d4c71882d0b34c5a9513, type: 2}
     dialogue: Recuerda que puedes usar doble salto
