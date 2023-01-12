@@ -237,11 +237,11 @@ PrefabInstance:
     - target: {fileID: 5305895758718934490, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+      objectReference: {fileID: 11400000, guid: d5e9be212bb0ddd41827f62abde036da, type: 2}
     - target: {fileID: 5305895758718934490, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+      objectReference: {fileID: 278252335509106367, guid: d5e9be212bb0ddd41827f62abde036da, type: 2}
     - target: {fileID: 6277139972518894171, guid: 522fb31f6b73c4250b7f427a633ad4d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -445,7 +445,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.5764706, g: 0.427451, b: 0.6745098, a: 1}
+  m_BackGroundColor: {r: 0.70980394, g: 0.8470589, b: 0.9725491, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
