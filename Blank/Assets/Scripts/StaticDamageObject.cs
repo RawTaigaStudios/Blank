@@ -7,7 +7,7 @@ using UnityEngine.SocialPlatforms;
 
 public class StaticDamageObject : MonoBehaviour
 {
-
+    /*
     [SerializeField] private Sprite[] sprites;
     
     [SerializeField] private int spriteElegido;
@@ -29,5 +29,5 @@ public class StaticDamageObject : MonoBehaviour
             spriteElegido = 0;
         }
     }
-
+    */
 }
